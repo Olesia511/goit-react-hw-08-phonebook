@@ -1,3 +1,3 @@
 export const RegisterForm = () => {
-  return <form></form>;
+  return <form>FORM</form>;
 };
