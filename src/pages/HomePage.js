@@ -5,11 +5,27 @@
 // import Button from '@mui/material/Button';
 // import IconButton from '@mui/material/IconButton';
 // // import MenuIcon from '@mui/icons-material/Menu';
+// import { phone_back } from '/public/img/phone_back.jpg';
 
 export const HomePage = () => {
   return (
     <>
-      <h1>HOME</h1>
+      <h1>Please login...</h1>
+      {/* <div
+        style={{
+          backgroundImage: `url(${
+            process.env.PUBLIC_URL + '/img/phone_back.jpg'
+          })`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+
+          width: '100vw',
+          height: '100vh',
+        }}
+      >
+        Hello World
+      </div> */}
+
       {/* <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
