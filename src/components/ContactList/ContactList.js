@@ -1,11 +1,11 @@
 import { ContactCard } from 'components/ContactCard/ContactCard';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectFilterContacts } from '../../redux/contacts/selectors';
-import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contacts/operations';
+// import { useEffect } from 'react';
+// import { fetchContacts } from '../../redux/contacts/operations';
 
 export const ContactList = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // useEffect(() => {
   //   dispatch(fetchContacts);
   // }, [dispatch]);
