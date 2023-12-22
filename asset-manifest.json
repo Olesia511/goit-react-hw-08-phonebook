@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.afda4575.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.a0c0fbe5.js",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.afda4575.js.map": "/goit-react-hw-08-phonebook/static/js/main.afda4575.js.map"
+    "main.a0c0fbe5.js.map": "/goit-react-hw-08-phonebook/static/js/main.a0c0fbe5.js.map"
   },
   "entrypoints": [
-    "static/js/main.afda4575.js"
+    "static/js/main.a0c0fbe5.js"
   ]
 }
