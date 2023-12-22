@@ -8,7 +8,7 @@ export const Layout = () => {
     <div
       style={{
         backgroundImage: `url(${
-          process.env.PUBLIC_URL + '/img/phone_back.jpg'
+          process.env.PUBLIC_URL + '/img/phone-back.jpg'
         })`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
