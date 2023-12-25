@@ -7,10 +7,9 @@
 // // import MenuIcon from '@mui/icons-material/Menu';
 // import { phone_back } from '/public/img/phone_back.jpg';
 
-export const HomePage = () => {
+export default function HomePage() {
   return (
     <>
-      <h1>Please login...</h1>
       {/* <div
         style={{
           backgroundImage: `url(${
@@ -47,4 +46,4 @@ export const HomePage = () => {
       </Box> */}
     </>
   );
-};
+}

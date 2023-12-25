@@ -5,7 +5,7 @@ import { ContactForm } from '../components/ContactForm/ContactForm';
 import { ContactList } from '../components/ContactList/ContactList';
 import { FilterContacts } from '../components/Filter/Filter';
 
-export const ContactsPage = () => {
+export default function ContactsPage() {
   return (
     <>
       <CssBaseline />
@@ -28,4 +28,4 @@ export const ContactsPage = () => {
       </Container>
     </>
   );
-};
+}

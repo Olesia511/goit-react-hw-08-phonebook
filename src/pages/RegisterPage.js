@@ -3,7 +3,7 @@ import { Container } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import { Box } from '@mui/material';
 
-export const RegisterPage = () => {
+export default function RegisterPage() {
   return (
     <>
       <CssBaseline />
@@ -24,4 +24,4 @@ export const RegisterPage = () => {
       </Container>
     </>
   );
-};
+}

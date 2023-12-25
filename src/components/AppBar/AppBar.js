@@ -63,9 +63,8 @@ export const AppBarHeader = () => {
               sx={{ flexGrow: 1 }}
             ></Typography>
 
-            <Button color="inherit">
-              {isLoggedIn ? <UserMenu /> : <AuthNav />}
-            </Button>
+            {isLoggedIn ? <UserMenu /> : <AuthNav />}
+
             <IconButton
               size="large"
               aria-label="account of current user"

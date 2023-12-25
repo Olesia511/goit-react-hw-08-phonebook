@@ -1,7 +1,7 @@
 import { Box, Container, CssBaseline } from '@mui/material';
 import { LoginForm } from 'components/LoginForm/LoginForm';
 
-export const LoginPage = () => {
+export default function LoginPage() {
   return (
     <>
       <CssBaseline />
@@ -22,4 +22,4 @@ export const LoginPage = () => {
       </Container>
     </>
   );
-};
+}
