@@ -16,7 +16,7 @@ const formSchema = Yup.object().shape({
     .max(50, 'Too Long!')
     .matches(/^[a-zA-Zа-яА-Я\s]+$/, 'The name must contain only letters')
     .required('Required'),
-  phone: Yup.string()
+  number: Yup.string()
     .matches(
       /^\d{3} \d{3} \d{2} \d{2}$/,
       'Enter the number in the format "095 111 22 33"'
@@ -32,10 +32,11 @@ export const ContactForm = () => {
       <Formik
         initialValues={{
           name: '',
-          phone: '',
+          number: '',
         }}
         validationSchema={formSchema}
         onSubmit={(initialValues, actions) => {
+          console.log(`initialValues`, initialValues);
           dispatch(addContact(initialValues));
           actions.resetForm();
         }}
@@ -48,14 +49,14 @@ export const ContactForm = () => {
           </LabelForm>
 
           <LabelForm>
-            Phone
+            Number
             <InputForm
-              name="phone"
+              name="number"
               placeholder="095 111 22 33"
               type="tel"
               required
             />
-            <ErrMsg name="phone" component="span" />
+            <ErrMsg name="number" component="span" />
           </LabelForm>
           <ButtonForm type="submit">Add contact</ButtonForm>
         </FormContact>

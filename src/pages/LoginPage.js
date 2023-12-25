@@ -1,3 +1,25 @@
+import { Box, Container, CssBaseline } from '@mui/material';
+import { LoginForm } from 'components/LoginForm/LoginForm';
+
 export const LoginPage = () => {
-  return <h1>LoginPage</h1>;
+  return (
+    <>
+      <CssBaseline />
+      <Container fixed>
+        <Box
+          sx={{
+            bgcolor: '#ECC424',
+            color: '#314448',
+            width: '50vh',
+            marginTop: '40px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            padding: '16px',
+          }}
+        >
+          <LoginForm />
+        </Box>
+      </Container>
+    </>
+  );
 };
