@@ -13,7 +13,7 @@ export default function ContactsPage() {
           sx={{
             bgcolor: '#ECC424',
             color: '#314448',
-            width: '50vh',
+            width: '50vw',
             marginTop: '20px',
             marginLeft: 'auto',
             marginRight: 'auto',
