@@ -1,20 +1,17 @@
-// import { AccountCircle } from '@mui/icons-material';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import PasswordIcon from '@mui/icons-material/Password';
-import { Box, Button, SvgIcon, TextField } from '@mui/material';
 import { useState } from 'react';
 import { fetchLoginUsers } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
+
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import PasswordIcon from '@mui/icons-material/Password';
+import { Box, Button, SvgIcon, TextField } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
-// import { Link } from 'react-router-dom';
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(blueGrey[500]),
   backgroundColor: blueGrey[700],
-  '&:hover': {
-    backgroundColor: blueGrey[900],
-  },
+  '&:hover': { backgroundColor: blueGrey[900] },
 }));
 
 export const LoginForm = () => {
@@ -42,7 +39,6 @@ export const LoginForm = () => {
           <TextField
             type="email"
             variant="standard"
-            // color="primary"
             label="Email"
             onChange={e => setEmail(e.target.value)}
             value={email}
@@ -59,7 +55,6 @@ export const LoginForm = () => {
           <TextField
             type="password"
             variant="standard"
-            // color="primary"
             label="Password"
             onChange={e => setPassword(e.target.value)}
             value={password}
@@ -71,7 +66,6 @@ export const LoginForm = () => {
         <Box sx={{ mb: 2, ml: 2.5, bgcolor: 'primary' }}>
           <ColorButton
             variant="contained"
-            // color="secondary"
             type="submit"
             sx={{
               mb: 2,

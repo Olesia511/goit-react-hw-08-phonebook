@@ -2,27 +2,13 @@ import { AccountCircle } from '@mui/icons-material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import PasswordIcon from '@mui/icons-material/Password';
 import { Box, Button, SvgIcon, TextField } from '@mui/material';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-// import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { blueGrey } from '@mui/material/colors';
 import { useDispatch } from 'react-redux';
 import { fetchRegisterUsers } from '../../redux/auth/operations';
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: '#314448',
-//       light: '#7D4E25',
-//     },
-//     secondary: {
-//       main: '#ECC424',
-//     },
-//   },
-// });
-// bgcolor: '#ECC424',
-// color: '#314448',
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(blueGrey[500]),
   backgroundColor: blueGrey[700],
@@ -49,7 +35,6 @@ export const RegisterForm = () => {
 
   return (
     <>
-      {/* <ThemeProvider theme={theme}> */}
       <h2 style={{ textAlign: 'center' }}>Register Form</h2>
       <form onSubmit={e => handleSubmit(e)}>
         <Box sx={{ display: 'flex', alignItems: 'flex-end', width: '90%' }}>
@@ -62,7 +47,6 @@ export const RegisterForm = () => {
             variant="standard"
             onChange={e => setUserName(e.target.value)}
             value={userName}
-            // color="primary"
             fullWidth
             required
             sx={{ mb: 4, color: '#314448' }}
@@ -76,7 +60,6 @@ export const RegisterForm = () => {
           <TextField
             type="email"
             variant="standard"
-            // color="primary"
             label="Email"
             onChange={e => setEmail(e.target.value)}
             value={email}
@@ -93,7 +76,6 @@ export const RegisterForm = () => {
           <TextField
             type="password"
             variant="standard"
-            // color="primary"
             label="Password"
             onChange={e => setPassword(e.target.value)}
             value={password}
@@ -105,7 +87,6 @@ export const RegisterForm = () => {
         <Box sx={{ mb: 2, ml: 2.5, bgcolor: 'primary' }}>
           <ColorButton
             variant="contained"
-            // color="secondary"
             type="submit"
             sx={{
               mb: 2,
@@ -141,7 +122,6 @@ export const RegisterForm = () => {
           </NavLink>
         </small>
       </Box>
-      {/* </ThemeProvider> */}
     </>
   );
 };

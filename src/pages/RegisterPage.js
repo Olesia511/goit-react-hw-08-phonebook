@@ -17,6 +17,7 @@ export default function RegisterPage() {
             marginLeft: 'auto',
             marginRight: 'auto',
             padding: '16px',
+            borderRadius: '8px',
           }}
         >
           <RegisterForm />

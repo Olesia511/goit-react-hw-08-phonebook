@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-// import { Toaster } from 'react-hot-toast';
 import { AppBarHeader } from './AppBar/AppBar';
 import { Suspense } from 'react';
 import { GlobalStyles } from './GlobalStyles';
@@ -23,7 +22,6 @@ export const Layout = () => {
         <Suspense fallback={<div>LOADING.......</div>}>
           <Outlet />
         </Suspense>
-        {/* <Toaster position="top-right" reverseOrder={false} /> */}
       </main>
       <GlobalStyles />
     </>

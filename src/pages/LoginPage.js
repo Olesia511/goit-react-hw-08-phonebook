@@ -15,6 +15,7 @@ export default function LoginPage() {
             marginLeft: 'auto',
             marginRight: 'auto',
             padding: '16px',
+            borderRadius: '8px',
           }}
         >
           <LoginForm />
