@@ -7,7 +7,7 @@ export const ContactCard = ({ contact: { id, name, number } }) => {
 
   return (
     <CardItem id={id}>
-      <p>
+      <p style={{ fontWeight: '500', fontSize: '20px' }}>
         {name}: {number}
       </p>
       <BtnDeleteContact

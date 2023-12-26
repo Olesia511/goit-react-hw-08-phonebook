@@ -13,10 +13,10 @@ export const fetchContacts = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    console.log(`persistedToken`, persistedToken);
+    // console.log(`persistedToken`, persistedToken);
     try {
       const response = await axios.get('/contacts');
-      console.log(`fetchContacts`, response);
+      // console.log(`fetchContacts`, response);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -31,10 +31,10 @@ export const addContact = createAsyncThunk(
   async (userData, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    console.log(`persistedToken`, persistedToken);
+    // console.log(`persistedToken`, persistedToken);
     try {
       const response = await axios.post('/contacts', userData);
-      console.log(`addContact`, response);
+      // console.log(`addContact`, response);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

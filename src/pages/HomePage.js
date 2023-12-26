@@ -7,43 +7,43 @@
 // // import MenuIcon from '@mui/icons-material/Menu';
 // import { phone_back } from '/public/img/phone_back.jpg';
 
+import { Box, Container, CssBaseline } from '@mui/material';
+import { UserMenu } from 'components/UserMenu/UserMenu';
+import { useAuth } from '../hooks/useAuth';
+
 export default function HomePage() {
+  const { isLoggedIn, user } = useAuth();
   return (
     <>
-      {/* <div
-        style={{
-          backgroundImage: `url(${
-            process.env.PUBLIC_URL + '/img/phone_back.jpg'
-          })`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-
-          width: '100vw',
-          height: '100vh',
-        }}
-      >
-        Hello World
-      </div> */}
-
-      {/* <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </Box> */}
+      <>
+        <CssBaseline />
+        <Container fixed>
+          <Box
+            sx={{
+              bgcolor: '#ECC424',
+              color: '#314448',
+              width: '50vh',
+              height: '20vh',
+              marginTop: '40px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              // padding: '16px',
+              borderRadius: '8px',
+            }}
+          >
+            {isLoggedIn && (
+              <h2 style={{ textAlign: 'center', paddingTop: '50px' }}>
+                Welcome, {user.name.toUpperCase()}.
+              </h2>
+            )}
+            {!isLoggedIn && (
+              <h2 style={{ textAlign: 'center', paddingTop: '50px' }}>
+                Please login or register.
+              </h2>
+            )}
+          </Box>
+        </Container>
+      </>
     </>
   );
 }

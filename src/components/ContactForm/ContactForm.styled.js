@@ -27,7 +27,9 @@ export const LabelForm = styled.label`
   display: flex;
   flex-direction: column;
   width: 320px;
-  gap: ${p => p.theme.spacing(5)};
+  gap: ${p => p.theme.spacing(3)};
+  font-size: 20px;
+  font-weight: 500;
 `;
 
 export const FormContact = styled(Form)`

@@ -15,10 +15,11 @@ export default function ContactsPage() {
             bgcolor: '#ECC424',
             color: '#314448',
             width: '50vh',
-            marginTop: '40px',
+            marginTop: '20px',
             marginLeft: 'auto',
             marginRight: 'auto',
             padding: '16px',
+            borderRadius: '12px',
           }}
         >
           <ContactForm />

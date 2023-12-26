@@ -10,8 +10,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import { SvgIcon, createTheme } from '@mui/material';
 // import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 
 // export default function ButtonAppBar() {
 //   return (
@@ -37,6 +37,23 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 //   );
 // }
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#314448',
+      light: '#7D4E25',
+      // light: will be calculated from palette.primary.main,
+      // dark: will be calculated from palette.primary.main,
+      // contrastText: will be calculated to contrast with palette.primary.main
+    },
+    secondary: {
+      main: '#F1EBD8',
+      // light: '#F5EBFF',
+      // dark: will be calculated from palette.secondary.main,
+      // contrastText: '#47008F',
+    },
+  },
+});
 export const AppBarHeader = () => {
   const { isLoggedIn } = useAuth();
 
@@ -44,37 +61,18 @@ export const AppBarHeader = () => {
     <header>
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
 
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+      <Box>
+        <AppBar
+          position="static"
+          sx={{
+            bgcolor: '#314448',
+            color: '#ECC424',
+          }}
+        >
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <Navigation />
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            ></Typography>
+            <Navigation />
 
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
-
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              // onClick={handleMenu}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
           </Toolbar>
         </AppBar>
       </Box>
